@@ -13,10 +13,16 @@ public class Main {
             counts.merge(s,1,Integer::sum);
         });
         System.out.println(counts);
-        StringBuilder annJonesPhd = new StringBuilder("Ann Jones Ph.D.");
+        StringBuilder annJonesPhd = new StringBuilder("Ann Jones");
         System.out.println("There are "+ counts.get(annJonesPhd).toString()+ " records for "+annJonesPhd );
         List<StringBuilder> cleanedNames = standardizeNames(population);
-        System.out.println(cleanedNames);
+       // System.out.println(cleanedNames);
+        System.out.println("There are "+ counts.get(annJonesPhd).toString()+ " records for "+annJonesPhd );
+        System.out.println(counts);
+        /***
+         * Since we changed the key names, in the using the standardizeName function, that affected the keys in the counts map, therefor the keys are not longer working.
+         * That is why we have to use immutable objects instead.
+         * ***/
     }
 
 
@@ -31,7 +37,7 @@ public class Main {
           }
           index++;
       }
-        System.out.println(list);
+       // System.out.println(list);
       return list;
     };
 
