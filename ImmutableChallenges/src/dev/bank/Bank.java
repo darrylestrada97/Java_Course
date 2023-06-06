@@ -27,6 +27,9 @@ public class Bank {
         customers.put(customer.getCustomerId(),customer);
     }
 
+    public void getAllCustomers(){
+        System.out.println(customers);
+    }
     public boolean doTransaction(String id, BankAccount.AccountType type, double amount){
         //Transaction transaction = new Transaction(routingNumber, (lastTransactionId + 1),(Integer) id,amount);
 
@@ -37,8 +40,10 @@ public class Bank {
             if(account != null){
                 if((account.getBalance() + amount) < 0){
                     System.out.println("Insufficient funds");
+
                 }else{
                     account.commitTransaction(routingNumber,lastTransactionId++,id,amount);
+                    return true;
                 }
             }
         }else{

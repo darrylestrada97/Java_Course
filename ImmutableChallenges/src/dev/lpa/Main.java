@@ -1,9 +1,8 @@
 package dev.lpa;
 
+import dev.bank.Bank;
 import dev.bank.BankAccount;
 import dev.bank.BankCustomer;
-
-import java.util.List;
 
 public class Main {
 
@@ -16,11 +15,26 @@ public class Main {
 //        BankCustomer joe = new BankCustomer("Joe", 500.00,
 //                10000.00);
 //        System.out.println(joe);
+        Bank bank = new Bank(325154);
+        bank.addCustomer("Joe",500.00,1000.00);
+       // bank.getAllCustomers();
 
-        BankCustomer joe = null;
-        List<BankAccount> accounts = joe.getAccounts();
-        accounts.clear();
-        System.out.println(joe);
+        BankCustomer joe = bank.getCustomer("000000010000000");
+        //System.out.println(joe);
+        if (bank.doTransaction(joe.getCustomerId(), BankAccount.AccountType.CHECKING,35)){
+            System.out.println(joe);
+        }
+        if (bank.doTransaction(joe.getCustomerId(), BankAccount.AccountType.CHECKING,-535)){
+            System.out.println(joe);
+        }
+        if (bank.doTransaction(joe.getCustomerId(), BankAccount.AccountType.CHECKING,-535)){
+            System.out.println(joe);
+        }
+
+        for(BankAccount account : joe.getAccounts()){
+            account.getTransactions().forEach((k,v) -> System.out.println(k+":"+v));
+
+        }
 
     }
 }
