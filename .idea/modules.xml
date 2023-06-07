@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ImmutableChallenges/ImmutableChallenges.iml" filepath="$PROJECT_DIR$/ImmutableChallenges/ImmutableChallenges.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InmutableClasses/InmutableClasses.iml" filepath="$PROJECT_DIR$/InmutableClasses/InmutableClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java_Course.iml" filepath="$PROJECT_DIR$/.idea/Java_Course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lambda/Lambda.iml" filepath="$PROJECT_DIR$/Lambda/Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MainMailer/MainMailer.iml" filepath="$PROJECT_DIR$/MainMailer/MainMailer.iml" />
+    </modules>
+  </component>
+</project>
